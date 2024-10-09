@@ -1,0 +1,316 @@
+/* Gobal style */
+html { 
+    font-size: 16px ;
+    font-family: "Mulish", sans-serif ;
+}
+
+body { 
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+
+
+/* Navigation bar */
+.top_nav { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.top_nav .nav_logo { 
+    width: 15%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.top_nav .nav_logo img { 
+
+    width: 90% ;
+    height: 90%;
+    object-fit: contain;
+    padding: 0;
+    padding-left: 2rem;
+}
+
+.top_nav .nav_list { 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Mulish";
+    font-size: 13px ;
+    color: #364049;
+    width: 100%;
+    padding-left: 4rem;
+    
+}
+
+.top_nav .nav_list ul { 
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    align-items: center;
+    padding: 1rem;
+}
+
+.top_nav .nav_list li { 
+    list-style-type: none;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+
+.top_nav .nav_icon {
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    column-gap: 1.5rem;
+    align-items: center;
+    padding-right: 1.5rem;
+}
+
+
+
+.top_nav .nav_icon button { 
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+
+.nav_icon .btn_search { 
+    margin-left: auto;
+}
+
+
+.dropdown_menu select { 
+    border:  none;
+    outline: none;
+    color: #364049;
+    font-family: "Mulish";
+}
+
+#menu_toggle { 
+    display: none;
+}
+
+.top_nav .hidden_menu .menu_box { 
+    display: none;
+}
+
+
+/* For hidden menu hidden in normal status */
+@media only screen and (min-width: 769px) { 
+    .top_nav .hamburger_menu { 
+        display: none;
+    }
+
+   
+
+
+
+}
+
+
+
+
+/* ...for small screen size...  */
+@media only screen and  (max-width: 768px) {
+
+    .top_nav { 
+        padding: 1.8rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+     .top_nav .nav_list { 
+        display: none;
+     }
+
+     .top_nav .nav_logo { 
+        display: flex;
+        justify-content: center;
+        padding: 0;
+     }
+
+
+     .top_nav .nav_icon .dropdown_menu { 
+        display: none;
+     }
+
+     .top_nav .nav_icon { 
+        width: 25%;
+     }
+
+     .top_nav .nav_logo img { 
+        padding: 0;
+        width: 100%;
+        width: 100%;
+     }
+
+     .top_nav .nav_icon { 
+        column-gap: 0.8rem;
+     }
+
+
+     /* Hamburger menu */
+
+     .top_nav .hamburger_menu { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+
+     .top_nav .checkbtn { 
+        cursor: pointer;
+        display: flex;
+        padding-left: 1rem;
+        justify-content: center;
+        align-items: center;
+     }
+
+     .top_nav .checkbtn img { 
+       object-fit: contain;
+       width: 100%;
+       height: 100%;
+     }
+     
+     .top_nav input { 
+        display: none;  /* hidden checkbox by default */
+     }
+
+     .top_nav .h_menu_content { 
+        display: none;  /* hidden dropdwon menu by default */ 
+     }
+
+     #check:checked ~ .h_menu_content {  
+        /*  above selector will made the element display with 2 condition 
+        1. checkbox is checked 
+        2. elements after (id:check) and under same parent element 
+          */
+        display: block; /*  display the dropdown menu   */
+        position: absolute;
+        top: 6rem;
+        background-color: white ;
+        padding: 1rem;
+        left: 0.025rem;
+        width: 280px;
+     
+     }
+
+     .top_nav .h_menu_content ul { 
+        list-style-type: none;  /*remove bullet point in list*/
+        margin: 0;
+     }
+
+     .top_nav .h_menu_content ul li a  { 
+        text-decoration: none;
+        line-height: 3;
+        color: #364049;
+        font-family: "Mulish";
+        cursor: pointer;
+     }
+
+     .top_nav .h_menu_content li:hover { 
+        background-color: #ff7f50;
+     }
+
+     #check:checked + .checkbtn  { 
+        content: url("images/img_close.png");
+     }
+
+} 
+
+
+
+
+
+/* Main Content */
+
+
+/* Banner */
+
+.banner { 
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    width: 100vw;
+}
+
+.banner .banner_img { 
+    width: 50%;
+}
+
+.banner .banner_img img { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .banner_text { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f1f3;
+    width: 50%;
+    padding: 3rem;
+    color: #364049;
+    line-height: 1.8rem;
+}
+
+.banner .banner_text h1 { 
+    display: flex;
+    font-size: 60px;
+    white-space: nowrap;
+    
+}
+
+.banner .banner_text p { 
+    width: 60%;
+    font-size: 16px;
+}
+
+.banner .banner_text h3 { 
+    color:   #ff7f50;
+    font-size: 18px;
+}
+
+.banner .banner_text button { 
+    border: 1px solid  #ff7f50 ;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-family: "Mulish";
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.banner .banner_text button:hover { 
+    background-color: #ff7f50;
+    color: white;
+}
+
+
+/* Quotation */
+
+.quotation { 
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quotation h1 { 
+    font-size: 1.75rem;
+    width: 40%;
+}
