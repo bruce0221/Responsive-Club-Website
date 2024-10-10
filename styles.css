@@ -24,7 +24,7 @@ body {
 .top_nav .nav_logo { 
     width: 15%;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -108,7 +108,7 @@ body {
 
 
 /* For hidden menu hidden in normal status */
-@media only screen and (min-width: 769px) { 
+@media only screen and (min-width: 768px) { 
     .top_nav .hamburger_menu { 
         display: none;
     }
@@ -126,10 +126,11 @@ body {
 @media only screen and  (max-width: 768px) {
 
     .top_nav { 
-        padding: 1.8rem 0;
+        padding: 1rem 0;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
 
      .top_nav .nav_list { 
@@ -139,7 +140,9 @@ body {
      .top_nav .nav_logo { 
         display: flex;
         justify-content: center;
+        align-items: center;
         padding: 0;
+        width: 40%;
      }
 
 
@@ -148,13 +151,14 @@ body {
      }
 
      .top_nav .nav_icon { 
-        width: 25%;
+        width: 30%;
      }
 
      .top_nav .nav_logo img { 
         padding: 0;
-        width: 100%;
-        width: 100%;
+        width: 50%;
+        object-fit: contain;
+    
      }
 
      .top_nav .nav_icon { 
@@ -166,8 +170,9 @@ body {
 
      .top_nav .hamburger_menu { 
         display: flex;
-        justify-content: center;
+        justify-content: start ;
         align-items: center;
+        width: 30%;
      }
 
      .top_nav .checkbtn { 
@@ -209,19 +214,15 @@ body {
 
      .top_nav .h_menu_content ul { 
         list-style-type: none;  /*remove bullet point in list*/
-        margin: 0;
+        padding: 0;
      }
 
      .top_nav .h_menu_content ul li a  { 
         text-decoration: none;
-        line-height: 3;
+        line-height: 4;
         color: #364049;
         font-family: "Mulish";
         cursor: pointer;
-     }
-
-     .top_nav .h_menu_content li:hover { 
-        background-color: #ff7f50;
      }
 
      #check:checked + .checkbtn  { 
@@ -299,6 +300,38 @@ body {
     color: white;
 }
 
+@media only screen and (max-width: 768px) { 
+    .banner { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner .banner_text { 
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+
+    .banner .banner_text button { 
+        margin-bottom: 2rem;
+    }
+
+    .banner .banner_img { 
+        width: 100vw;
+    }
+
+
+}
+
+
+
+
+
 
 /* Quotation */
 
@@ -312,5 +345,24 @@ body {
 
 .quotation h1 { 
     font-size: 1.75rem;
-    width: 40%;
+    width: 80%;
+}
+
+
+@media only screen and (max-width: 768px) { 
+
+    .quotation{ 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 5rem;
+    }
+
+    .quotation h1 { 
+        font-size: 28px ;
+        font-family: "Space Grotesk", sans-serif;
+        line-height: 2;
+    }
+
+
 }
