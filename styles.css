@@ -741,3 +741,35 @@ footer .footer_bottom ol {
     font-size: 0.875rem;
     color: #364049;
 }
+
+@media only screen and (max-width: 768px)  { 
+
+    footer { 
+        width: 100%;
+    }
+
+    footer .footer_right { 
+        width: 50%;
+    }
+
+    footer .footer_left { 
+        width: 50%;
+
+    }
+
+    footer .footer_right p { 
+        width: 60%;
+    }
+
+    footer .footer_bottom { 
+        width: 90%;
+    }
+
+    footer .footer_bottom ol { 
+        column-gap: 2rem;
+    }
+
+    footer .footer_bottom ol li { 
+        text-align: center;
+    }
+}
